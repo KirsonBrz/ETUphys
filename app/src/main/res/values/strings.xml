@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Physics Leti</string>
+
+    <string name="value_any_category">Выбрать работу</string>
+    <string name="value_any_city">Выбрать раздел</string>
+    <string name="value_any_price">Выбрать семестр</string>
+
+    <string name="price_1">1</string>
+    <string name="price_2">2</string>
+    <string name="price_3">3</string>
+
+    <string name="label_category">Category</string>
+    <string name="label_city">City</string>
+    <string name="label_price">Price</string>
+    <string name="label_sort_by">Sort By</string>
+
+    <string name="fmt_num_ratings" translatable="false">(%d)</string>
+    <string name="all_restaurants">Все работы</string>
+    <string name="header_filters">Фильтр</string>
+    <string name="search">Поиск</string>
+
+    <string name="sort_by_rating">Отсортировать по номеру</string>
+    <string name="sort_by_popularity">Отсортировать по популярности</string>
+    <string name="sort_by_price">Отсортировать по семестру</string>
+
+    <string name="sorted_by_rating">Отсортировано по номеру</string>
+    <string name="sorted_by_price">Отсортировано по семестрам</string>
+    <string name="sorted_by_popularity">Отсортировано по популярности</string>
+
+    <string name="add_random_items">Не жмите!</string>
+    <string name="sign_out">Выйти из аккаунта</string>
+    <string name="divider_bullet">•</string>
+    <string name="apply">Применить</string>
+    <string name="cancel">Отменить</string>
+    <string name="message_no_results">Oops, не удалось найти результаты\nПоменяйте фильтр!</string>
+    <string name="message_no_reviews">Будьте первым, кто оставил ревью!</string>
+    <string name="hint_review">Вам понравилась работа?</string>
+    <string name="submit">Отправить</string>
+    <string name="filter_add_review">Добавить ревью</string>
+
+    <string name="title_sign_in_error">Ошибка при входе</string>
+    <string name="message_no_network">Отсутствует подключение к интернету!</string>
+    <string name="message_unknown">Неизвестная ошибка</string>
+    <string name="option_retry">Повторить</string>
+    <string name="option_exit">Закрыть</string>
+
+    <!-- Types of food I could think of in 5 minutes -->
+    <string-array name="categories">
+        <item>@string/value_any_category</item>
+
+        <item>Измерение скорости пули с помощью баллистического маятника</item>
+        <item>Неупругое соударение шаров</item>
+        <item>Упругое соударение шаров</item>
+        <item>Определение коэффициента трения покоя</item>
+        <item>Определение коэффициента трения скольжения</item>
+        <item>Скатывание тела с наклонной плоскости</item>
+        <item>Измерение магнитного поля Земли</item>
+    </string-array>
+
+
+    <string-array name="cities">
+        <item>@string/value_any_city</item>
+
+        <item>Механика</item>
+        <item>Электричество</item>
+        <item>Магнетизм</item>
+        <item>Молекулярная физика</item>
+        <item>Оптика</item>
+        <item>Атомная и ядерная физика</item>
+
+    </string-array>
+
+    <!-- Price filters -->
+    <string-array name="prices">
+        <item>@string/value_any_price</item>
+
+        <item>@string/price_1</item>
+        <item>@string/price_2</item>
+        <item>@string/price_3</item>
+    </string-array>
+
+    <!-- Ways you can sort restaurants -->
+    <string-array name="sort_by">
+        <item>@string/sort_by_rating</item>
+        <item>@string/sort_by_popularity</item>
+        <item>@string/sort_by_price</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.etuspace.firebase.example.fireeats.java.MessagesActivity"
+    android:animateLayoutChanges="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarMes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:title="@string/app_name"
+        app:titleMarginStart="24dp"
+        app:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:id="@+id/spinnerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarMes"
+        android:layout_marginTop="200sp"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+
+
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spinnerFacultet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Выберите факультет"
+             />
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spinnerCourse"
+            android:layout_width="325sp"
+            android:layout_marginTop="28sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Выберите курс"
+            android:visibility="gone"
+             />
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spinnerGroup"
+            android:layout_width="225sp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="28sp"
+            android:layout_weight="1"
+            android:hint="Выберите группу"
+            android:visibility="gone"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lab_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbarMes"
+        android:visibility="gone"
+        android:animateLayoutChanges="true">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabFindGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_sort_white_24px"
+        android:layout_above="@+id/bottomBarMessages"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60sp"
+        android:layout_marginRight="10sp"
+        android:visibility="gone"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/bottomBarMessages"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottomNavView_Bar_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_grey_border_bottom"
+            app:menu="@menu/bottom_navigation_menu">
+
+
+        </android.support.design.widget.BottomNavigationView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

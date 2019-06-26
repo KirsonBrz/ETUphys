@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_marginTop="8dp">
+
+
+
+    <ImageView
+        android:id="@+id/restaurantItemImage"
+        android:layout_width="70dp"
+        android:layout_height="80dp"
+        android:background="#757575"
+        android:scaleType="centerCrop"
+        android:src="@drawable/food_1" />
+
+    <TextView
+        android:id="@+id/restaurantItemName"
+        style="@style/AppTheme.Subheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/restaurantItemImage"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="-2dp"
+        android:layout_toLeftOf="@+id/restaurantItemPrice"
+        android:layout_toRightOf="@+id/restaurantItemImage"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Номер лабораторной работы"
+        android:textStyle="bold"/>
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/restaurantItemRating"
+        style="@style/Widget.MaterialRatingBar.RatingBar.Indicator.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/restaurantItemName"
+        android:layout_below="@+id/restaurantItemName"
+        android:layout_marginBottom="4dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/restaurantItemNumRatings"
+        style="@style/AppTheme.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/restaurantItemRating"
+        android:layout_alignTop="@+id/restaurantItemRating"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/restaurantItemRating"
+        android:gravity="center_vertical"
+        android:textColor="@color/greyDisabled"
+        tools:text="(10)"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/restaurantItemCategory"
+        style="@style/AppTheme.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/restaurantItemName"
+        android:layout_below="@+id/restaurantItemRating"
+        android:textColor="@color/greySecondary"
+        tools:text="Название лабораторной работы"
+        />
+
+    <TextView
+        android:id="@+id/restaurantItemCityDivider"
+        style="@style/AppTheme.TextDivider"
+        android:layout_alignTop="@+id/restaurantItemCategory"
+        android:layout_toRightOf="@+id/restaurantItemCategory"
+        android:text="@string/divider_bullet" />
+
+    <TextView
+        android:id="@+id/restaurantItemCity"
+        style="@style/AppTheme.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/restaurantItemCategory"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/greySecondary"
+        tools:text="Раздел физики" />
+
+    <TextView
+        android:id="@+id/restaurantItemPrice"
+        style="@style/AppTheme.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/greySecondary"
+        tools:text="$$$"
+        android:visibility="gone"/>
+    <View
+        style="@style/AppTheme.Divider"
+        android:layout_below="@id/restaurantItemCity"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+
+</RelativeLayout>

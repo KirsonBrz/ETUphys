@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.etuspace.firebase.example.fireeats.java.UserActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:title="@string/app_name"
+        app:titleMarginStart="24dp"
+        app:titleTextColor="@android:color/white" />
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabSendMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-28dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="16dp"
+        app:srcCompat="@drawable/fui_ic_mail_white_24dp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarUser"
+        android:scrollbarStyle="insideOverlay">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/userImage"
+                android:layout_width="176dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@+id/toolbarUser"
+                android:src="@drawable/user"
+                android:scaleType="centerCrop"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/container_loaded"
+                android:layout_below="@+id/userImage"
+                android:layout_marginTop="5dp">
+
+
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="TextView"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <View
+                    style="@style/AppTheme.Divider"
+                    android:layout_below="@id/userName"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/userSurname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userName"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="TextView"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <View
+                    style="@style/AppTheme.Divider"
+                    android:layout_below="@id/userSurname"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/userPosition"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userEmail"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="TextView"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <View
+                    style="@style/AppTheme.Divider"
+                    android:layout_below="@id/userPosition"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userSurname"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="TextView"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <View
+                    style="@style/AppTheme.Divider"
+                    android:layout_below="@id/userEmail"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/userGroup"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userPosition"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="TextView"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <View
+                    style="@style/AppTheme.Divider"
+                    android:layout_below="@id/userGroup"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/userGroup"
+                    android:layout_marginTop="15dp">
+
+
+
+                    <Button
+                        android:id="@+id/button_table"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="1"
+                        android:text="Расписание"
+                        android:theme="@style/ThemeOverlay.FilterButton" />
+
+
+                    <Button
+                        android:id="@+id/button_docs"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="1"
+                        android:text="Личные файлы"
+                        android:theme="@style/ThemeOverlay.FilterButton" />
+
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/container_create"
+                android:layout_below="@+id/userImage"
+                android:visibility="gone">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/userNameEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:inputType="textPersonName"
+                    android:hint="Имя"/>
+                <View
+                    style="@style/AppTheme.Divider"
+                    android:layout_below="@id/userNameEdit"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/userSurnameEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userNameEdit"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="35dp"
+                    android:inputType="textPersonName"
+                    android:hint="Фамилия" />
+                <View
+                    style="@style/AppTheme.Divider"
+                    android:layout_below="@id/userSurnameEdit"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"/>
+
+
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/userEmailEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userSurnameEdit"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="35dp"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email" />
+                <View
+                    style="@style/AppTheme.Divider"
+                    android:layout_below="@id/userEmailEdit"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/userEmailEdit"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/radioUser"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/radioTeacher"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Преподаватель" />
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/radioStudent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Студент"
+                        android:layout_weight="1"/>
+
+
+                </RadioGroup>
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/userGroupEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioUser"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="35dp"
+                    android:maxLength="4"
+                    android:inputType="number"
+                    android:hint="Номер группы"
+                    android:visibility="invisible"/>
+                <View
+                    style="@style/AppTheme.Divider"
+                    android:layout_below="@id/userGroupEdit"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/button_create_user"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_below="@+id/userGroupEdit"
+                    android:text="Зарегестрироваться!"
+                    android:theme="@style/ThemeOverlay.FilterButton"
+                    android:layout_marginLeft="55dp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/bottomBarUser"
+        android:layout_alignParentBottom="true">
+
+        <android.support.design.widget.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bottomNavView_Bar_user"
+            android:background="@drawable/white_grey_border_bottom"
+            app:menu="@menu/bottom_navigation_menu">
+
+
+        </android.support.design.widget.BottomNavigationView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginLeft="3sp"
+    android:layout_marginTop="15dp"
+    android:background="#880E4F"
+    android:id="@+id/card_item_user">
+
+
+
+    <ImageView
+        android:id="@+id/userItemImage"
+        android:layout_width="70dp"
+        android:layout_height="80dp"
+        android:background="#757575"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user" />
+
+    <TextView
+        android:id="@+id/userNameItem"
+        style="@style/AppTheme.Subheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="-2dp"
+        android:layout_toRightOf="@+id/userItemImage"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#E8EAF6"
+        tools:text="Имя и фамилия"
+        android:textStyle="bold"/>
+
+
+
+    <TextView
+        android:id="@+id/userPositionItem"
+        style="@style/AppTheme.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/userItemImage"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/userNameItem"
+        android:textColor="#E8EAF6"
+        tools:text="Должность: "
+
+        />
+
+    <TextView
+        android:id="@+id/restaurantItemCityDivider"
+        style="@style/AppTheme.TextDivider"
+        android:layout_below="@+id/userNameItem"
+        android:layout_toRightOf="@+id/userPositionItem"
+        android:text="@string/divider_bullet" />
+
+    <TextView
+        android:id="@+id/groupItem"
+        style="@style/AppTheme.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userPositionItem"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="10dp"
+        tools:text="Группа: "
+        android:textColor="#E8EAF6"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3F51B5"
+        app:srcCompat="@drawable/fui_ic_mail_white_24dp"
+        android:layout_alignParentRight="true"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabUpStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3F51B5"
+        app:srcCompat="@drawable/ic_trending_up_white_24dp"
+        android:layout_toLeftOf="@+id/fabMessage"
+        android:layout_marginRight="8sp"
+        />
+
+
+    <View
+        style="@style/AppTheme.Divider"
+        android:layout_below="@id/groupItem"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="5dp"/>
+
+
+</RelativeLayout>
